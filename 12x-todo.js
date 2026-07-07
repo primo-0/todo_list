@@ -15,7 +15,7 @@ function renderTodoList() {
 let todoListHTML = '';
 
 
-todoList.forEach(function(todoObject, index) {
+todoList.forEach((todoObject, index) => {
   
    const { name, dueDate } = todoObject;
    const html = `
@@ -49,8 +49,7 @@ function addTodo(){
 
   todoList.push
   ({
-      //name:name,
-      //dueDate: dueDate
+     
       name,
       dueDate
   });
@@ -58,7 +57,7 @@ function addTodo(){
 
   inputElement.value = '';
   renderTodoList();
-  //this is to save storage..... 
+  //save para sa storage 
   saveToStorage();
   
 }
